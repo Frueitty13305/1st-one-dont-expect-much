@@ -1,1 +1,22 @@
+import tkinter as tk
+from tkinter import messagebox
 
+def show_popup():
+    # This displays a standard informational pop-up box
+    messagebox.showinfo("Notification", "This is a controlled, benign pop-up window.")
+
+# Create the main application window
+root = tk.Tk()
+root.title("Main Application")
+root.geometry("300x200")
+
+# Add a label to the main window
+label = tk.Label(root, text="Click the button to open a window:")
+label.pack(pady=20)
+
+# Add a button that triggers the pop-up function when clicked
+popup_button = tk.Button(root, text="Open Pop-Up", command=show_popup)
+popup_button.pack(pady=10)
+
+# Start the GUI event loop
+root.mainloop()
